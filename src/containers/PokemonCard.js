@@ -7,34 +7,23 @@ class PokemonCard extends React.Component {
     clicked: false
   }
 
-  togglePokemonCard = () => {
-    const value = !this.state.clicked
-    this.setState({
-      clicked: value
-    })
-  }
 
 	render() {
-    const whichImage = this.state.clicked? (
-      'back'
-    ) : (
-      'front'
-    )
     return(
       <Card>
-        <div onClick={this.togglePokemonCard}>
+        <div >
           <div className="image">
-            <img alt="oh no!" src={this.props.pokemon.sprites[whichImage]} />
+            <img alt="oh no!"  />
           </div>
           <div className="content">
             <div className="header">
-              {this.props.pokemon.name}
+              POKEMON NAME HERE
             </div>
           </div>
           <div className="extra content">
             <span>
               <i className="icon heartbeat red"/>
-                {this.props.pokemon.stats[0].value} hp
+                POKEMON HP HERE hp
             </span>
           </div>
         </div>
