@@ -18,7 +18,7 @@
 
 ## Trying to figure out where to start?
 
-  For the most part, the framework for this application is already made, with a simple json server, and a react app, with all the components needed. Our goal here is to, given a list of deliverables, navigate the existing code base and implement several new features. Take some time to familiarize yourself with the structure of the application, and think about where you will be making changes in order to implement the new features. While you could solve this lab without creating new components, or changing any existing ones to be functional components, you are encouraged to do so if it makes sense to do that at any point.
+  For the most part, the framework for this application is already made, with a simple json server, and a react app, with all the components needed. When you run `npm start` a json server will spin up and you can access the pokemon info at http://localhost:3000/pokemon, and your react application will also start, on port 3001. Given a list of deliverables, our goal is to navigate the existing code base and implement several new features. Take some time to familiarize yourself with the structure of the application, and think about where you will be making changes in order to implement the new features. While you could solve this lab without creating new components, or changing any existing ones to be functional components, you are encouraged to do so if it makes sense to do that at any point.
 
   Be sure to use good programming practices, such as clear variable names and single responsibility functions. We want our react app to be clean, easy to read and understand, and of course, easy to to debug, or even add more features to later.
 
