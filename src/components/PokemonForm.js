@@ -12,8 +12,7 @@ class PokemonForm extends React.Component {
       backUrl: ''
     };
   }
-
-
+  
   render() {
     return (
       <div>

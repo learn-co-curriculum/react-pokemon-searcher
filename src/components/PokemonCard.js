@@ -2,12 +2,6 @@ import React from "react";
 import {Card} from 'semantic-ui-react'
 
 class PokemonCard extends React.Component {
-
-  state = {
-    clicked: false
-  }
-
-
 	render() {
     return(
       <Card>
