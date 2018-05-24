@@ -5,11 +5,6 @@ import { Search } from 'semantic-ui-react'
 import _ from "lodash";
 
 class PokemonPage extends React.Component {
-	state = {
-		pokemonCollection: []
-	};
-
-
 	render() {
 		return (
 			<div>
