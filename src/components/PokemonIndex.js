@@ -48,7 +48,6 @@ class PokemonIndex extends React.Component {
         <PokemonForm addPokemon={this.addPokemon} />
         <br />
         <Search onSearchChange={_.debounce(this.handleSearchChange, 500)} showNoResults={false} />
-        {/*TODO: should we make our own Search component*/}
         <br />
         <PokemonCollection pokemon={desiredPokemon} toggleImage={this.toggleImage} />
       </div>

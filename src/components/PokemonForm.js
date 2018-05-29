@@ -8,14 +8,7 @@ class PokemonForm extends React.Component {
     this.state = this.getInitialState()
   }
 
-  getInitialState = () => {
-    return {
-      name: '',
-      hp: '',
-      frontUrl: '',
-      backUrl: ''
-    }
-  }
+  getInitialState = () => ({ name: '', hp: '', frontUrl: '', backUrl: '' })
 
   handleChange = (e, { name, value }) => this.setState({ [name]: value })
 
@@ -25,10 +18,11 @@ class PokemonForm extends React.Component {
     fetch('http://localhost:3000/pokemon', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
       },
       body: JSON.stringify({
-        name: name,
+        name,
         stats: [
           {
             value: hp,
@@ -43,17 +37,17 @@ class PokemonForm extends React.Component {
     })
       .then(resp => resp.json())
       .then(pokemon => this.props.addPokemon(pokemon))
-      .catch(error => console.log(error))
+      .catch(error => console.error(error))
     this.setState(this.getInitialState())
   }
 
   render() {
     const { name, hp, frontUrl, backUrl } = this.state
-    const { handleChange } = this
+    const { handleChange, handleSubmit } = this
     return (
       <div>
         <h3>Add a Pokemon!</h3>
-        <Form onSubmit={this.handleSubmit}>
+        <Form onSubmit={handleSubmit}>
           <Form.Group widths="equal">
             <Form.Input
               fluid
