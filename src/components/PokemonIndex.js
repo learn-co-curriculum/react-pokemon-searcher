@@ -14,6 +14,7 @@ class PokemonIndex extends React.Component {
     fetch('http://localhost:3000/pokemon')
       .then(res => res.json())
       .then(pokemonCollection => this.setState({ pokemonCollection: pokemonCollection }))
+      .catch(e => console.error(e))
   }
 
   handleSearchChange = (e, { value }) => {
@@ -26,7 +27,7 @@ class PokemonIndex extends React.Component {
     this.setState({
       pokemonCollection: [
         ...col.slice(0, i),
-        { ...pokemon, clicked: !pokemon.clicked },
+        { ...pokemon, isClicked: !pokemon.isClicked },
         ...col.slice(i + 1)
       ]
     })
@@ -47,6 +48,7 @@ class PokemonIndex extends React.Component {
         <PokemonForm addPokemon={this.addPokemon} />
         <br />
         <Search onSearchChange={_.debounce(this.handleSearchChange, 500)} showNoResults={false} />
+        {/*TODO: should we make our own Search component*/}
         <br />
         <PokemonCollection pokemon={desiredPokemon} toggleImage={this.toggleImage} />
       </div>
