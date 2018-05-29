@@ -4,7 +4,7 @@ import PokemonForm from './PokemonForm'
 import { Search } from 'semantic-ui-react'
 import _ from 'lodash'
 
-class PokemonPage extends React.Component {
+class PokemonIndex extends React.Component {
   state = {
     pokemonCollection: [],
     searchTerm: ''
@@ -54,4 +54,4 @@ class PokemonPage extends React.Component {
   }
 }
 
-export default PokemonPage
+export default PokemonIndex
