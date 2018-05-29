@@ -44,11 +44,11 @@ class PokemonIndex extends React.Component {
       <div>
         <h1>Pokemon Searcher</h1>
         <br />
+        <PokemonForm addPokemon={this.addPokemon} />
+        <br />
         <Search onSearchChange={_.debounce(this.handleSearchChange, 500)} showNoResults={false} />
         <br />
         <PokemonCollection pokemon={desiredPokemon} toggleImage={this.toggleImage} />
-        <br />
-        <PokemonForm addPokemon={this.addPokemon} />
       </div>
     )
   }
