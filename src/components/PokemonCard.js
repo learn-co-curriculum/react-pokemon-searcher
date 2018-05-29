@@ -1,15 +1,14 @@
 import React from 'react'
 import { Card } from 'semantic-ui-react'
 
-const PokemonCard = props => {
-  const { name, stats, sprites, isClicked } = props.pokemon
+const PokemonCard = ({ pokemon, toggleImage }) => {
+  const { name, stats, sprites, isClicked } = pokemon
   const url = isClicked ? sprites.back : sprites.front
   const hp = stats.find(s => s.name === 'hp').value || 50
-  const toggleImage = () => props.toggleImage(props.pokemon)
 
   return (
     <Card>
-      <div onClick={toggleImage}>
+      <div onClick={() => toggleImage(pokemon)}>
         <div className="image">
           <img src={url} alt="oh no!" />
         </div>
