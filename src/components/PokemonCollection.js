@@ -1,19 +1,13 @@
-import React from "react";
-import PokemonCard from "./PokemonCard";
-import { Card } from 'semantic-ui-react';
+import React from 'react'
+import PokemonCard from './PokemonCard'
+import { Card } from 'semantic-ui-react'
 
-class PokemonCollection extends React.Component {
-	render() {
-		return (
-			<Card.Group itemsPerRow={6}>
-				{this.props.pokemon.map(
-					pokemon => {
-						return <PokemonCard key={pokemon.id} pokemon={pokemon} toggleImage={this.props.toggleImage} />
-					}
-				)}
-			</Card.Group>
-		)
-	}
-};
+const PokemonCollection = ({ pokemon, toggleImage }) => (
+  <Card.Group itemsPerRow={6}>
+    {pokemon.map(pokemon => (
+      <PokemonCard key={pokemon.id} pokemon={pokemon} toggleImage={toggleImage} />
+    ))}
+  </Card.Group>
+)
 
-export default PokemonCollection;
+export default PokemonCollection
