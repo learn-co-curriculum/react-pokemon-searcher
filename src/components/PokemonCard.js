@@ -2,7 +2,6 @@ import React from 'react'
 import { Card } from 'semantic-ui-react'
 
 const PokemonCard = props => {
-  console.log(props)
   const { name, stats, sprites, isClicked } = props.pokemon
   const url = isClicked ? sprites.back : sprites.front
   const hp = stats.find(s => s.name === 'hp').value || 50
