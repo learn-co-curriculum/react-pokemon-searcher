@@ -12,7 +12,7 @@ const PokemonCard = props => {
     <Card>
       <div onClick={toggleImage}>
         <div className="image">
-          <img src={url} alt="oh no! No image found!" />
+          <img src={url} alt="oh no!" />
         </div>
         <div className="content">
           <div className="header">{name}</div>
