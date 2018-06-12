@@ -9,7 +9,7 @@ class PokemonPage extends React.Component {
       <div>
         <h1>Pokemon Searcher</h1>
         <br />
-        <Search onSearchChange={} showNoResults={false} />
+        <Search onSearchChange={null} showNoResults={false} />
         <br />
         <PokemonCollection />
         <br />
