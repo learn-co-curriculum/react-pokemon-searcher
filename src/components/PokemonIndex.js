@@ -1,6 +1,7 @@
 import React from 'react';
 import PokemonCollection from './PokemonCollection';
 // import PokemonForm from './PokemonForm';
+import Loading from './Loading';
 import { Search } from 'semantic-ui-react';
 
 class PokemonIndex extends React.Component {
