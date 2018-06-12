@@ -1,6 +1,6 @@
-import React from 'react';
-import PokemonCard from './PokemonCard';
-import { Card } from 'semantic-ui-react';
+import React from 'react'
+import PokemonCard from './PokemonCard'
+import { Card } from 'semantic-ui-react'
 
 class PokemonCollection extends React.Component {
   render() {
@@ -14,4 +14,4 @@ class PokemonCollection extends React.Component {
   }
 }
 
-export default PokemonCollection;
+export default PokemonCollection
