@@ -3,7 +3,7 @@ import PokemonCollection from './PokemonCollection';
 // import PokemonForm from './PokemonForm';
 import { Search } from 'semantic-ui-react';
 
-class PokemonIndex extends React.Component {
+class PokemonPage extends React.Component {
   render() {
     return (
       <div>
@@ -19,4 +19,4 @@ class PokemonIndex extends React.Component {
   }
 }
 
-export default PokemonIndex;
+export default PokemonPage;
