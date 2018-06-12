@@ -1,7 +1,7 @@
-import React from 'react'
-import PokemonCollection from './PokemonCollection'
-// import PokemonForm from './PokemonForm'
-import { Search } from 'semantic-ui-react'
+import React from 'react';
+import PokemonCollection from './PokemonCollection';
+// import PokemonForm from './PokemonForm';
+import { Search } from 'semantic-ui-react';
 
 class PokemonPage extends React.Component {
   render() {
@@ -13,10 +13,10 @@ class PokemonPage extends React.Component {
         <br />
         <PokemonCollection />
         <br />
-        <PokemonForm />
+        {/*<PokemonForm />*/}
       </div>
     )
   }
 }
 
-export default PokemonPage
+export default PokemonPage;
