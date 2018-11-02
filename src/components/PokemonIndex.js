@@ -27,7 +27,7 @@ class PokemonIndex extends React.Component {
     this.setState({
       pokemonCollection: [
         ...col.slice(0, i),
-        // initially pokemon.isClickes is undefined; inverting that falsey value makes it true
+        // initially pokemon.isClicked is undefined; inverting that falsey value makes it true
         { ...pokemon, isClicked: !pokemon.isClicked },
         ...col.slice(i + 1)
       ]
