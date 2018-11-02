@@ -1,6 +1,10 @@
 import React from 'react'
 import PokemonCollection from './PokemonCollection'
 import PokemonForm from './PokemonForm'
+<<<<<<< HEAD
+import Search from './Search'
+import { Container } from 'semantic-ui-react'
+=======
 import { Search } from 'semantic-ui-react'
 import _ from 'lodash'
 
@@ -37,23 +41,22 @@ class PokemonIndex extends React.Component {
   addPokemon = pokemon => {
     this.setState({ pokemonCollection: [...this.state.pokemonCollection, pokemon] })
   }
+>>>>>>> Update PokemonIndex.js
 
+class PokemonPage extends React.Component {
   render() {
-    const desiredPokemon = this.state.pokemonCollection.filter(p =>
-      p.name.includes(this.state.searchTerm)
-    )
     return (
-      <div>
+      <Container>
         <h1>Pokemon Searcher</h1>
         <br />
-        <PokemonForm addPokemon={this.addPokemon} />
+        <PokemonForm />
         <br />
-        <Search onSearchChange={_.debounce(this.handleSearchChange, 500)} showNoResults={false} />
+        <Search onChange={() => console.log('🤔')} />
         <br />
-        <PokemonCollection pokemon={desiredPokemon} toggleImage={this.toggleImage} />
-      </div>
+        <PokemonCollection />
+      </Container>
     )
   }
 }
 
-export default PokemonIndex
+export default PokemonPage
