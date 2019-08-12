@@ -1,5 +1,7 @@
 # React Pokemon Searcher
 
+![Pokemon search screen recording](./pokemon.gif)
+
 ## React Code Challenge Practice
 
 ## Project goals:
