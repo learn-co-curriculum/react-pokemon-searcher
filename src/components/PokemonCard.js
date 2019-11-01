@@ -1,27 +1,27 @@
 import React from 'react'
 import { Card } from 'semantic-ui-react'
+import CardFront from './CardFront'
+import CardBack from './CardBack'
 
-class PokemonCard extends React.Component {
+export default class PokemonCard extends React.PureComponent{
+  state = {
+    flipped: false
+  }
+
+  flipCard = () => {
+    this.setState({
+      flipped: !this.state.flipped
+    })
+  }
   render() {
     return (
-      <Card>
-        <div>
-          <div className="image">
-            <img alt="oh no!" />
-          </div>
-          <div className="content">
-            <div className="header">POKEMON NAME HERE</div>
-          </div>
-          <div className="extra content">
-            <span>
-              <i className="icon heartbeat red" />
-              POKEMON HP HERE hp
-            </span>
-          </div>
-        </div>
-      </Card>
+     <div>
+       {this.state.flipped 
+        ? <CardBack flipCard={this.flipCard} poke={this.props.poke} /> 
+        : <CardFront flipCard={this.flipCard} poke={this.props.poke} />} 
+     </div>
     )
   }
+
 }
 
-export default PokemonCard
