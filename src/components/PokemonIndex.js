@@ -1,21 +1,21 @@
 import React from 'react'
 import PokemonCollection from './PokemonCollection'
 import PokemonForm from './PokemonForm'
-import { Search } from 'semantic-ui-react'
-import _ from 'lodash'
+import Search from './Search'
+import { Container } from 'semantic-ui-react'
 
 class PokemonPage extends React.Component {
   render() {
     return (
-      <div>
+      <Container>
         <h1>Pokemon Searcher</h1>
         <br />
         <PokemonForm />
         <br />
-        <Search onSearchChange={_.debounce(() => console.log('🤔'), 500)} showNoResults={false} />
+        <Search onChange={() => console.log('🤔')} />
         <br />
         <PokemonCollection />
-      </div>
+      </Container>
     )
   }
 }
