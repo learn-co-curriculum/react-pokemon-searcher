@@ -1,8 +1,8 @@
 import React from 'react'
 import PokemonCollection from './PokemonCollection'
 import PokemonForm from './PokemonForm'
-import { Search } from 'semantic-ui-react'
-import _ from 'lodash'
+import Search from './Search'
+import { Container } from 'semantic-ui-react'
 
 class PokemonIndex extends React.Component {
   state = {
@@ -17,8 +17,8 @@ class PokemonIndex extends React.Component {
       .catch(e => console.error(e))
   }
 
-  handleSearchChange = (e, { value }) => {
-    this.setState({ searchTerm: value })
+  handleSearchChange = event => {
+    this.setState({ searchTerm: event.target.value })
   }
 
   toggleImage = pokemon => {
@@ -43,15 +43,15 @@ class PokemonIndex extends React.Component {
       p.name.includes(this.state.searchTerm)
     )
     return (
-      <div>
+      <Container>
         <h1>Pokemon Searcher</h1>
         <br />
-        <PokemonForm addPokemon={this.addPokemon} />
+        <PokemonForm addPokemon={this.addPokemon}/>
         <br />
-        <Search onSearchChange={_.debounce(this.handleSearchChange, 500)} showNoResults={false} />
+        <Search onChange={this.handleSearchChange} />
         <br />
-        <PokemonCollection pokemon={desiredPokemon} toggleImage={this.toggleImage} />
-      </div>
+        <PokemonCollection pokemon={desiredPokemon} toggleImage={this.toggleImage}/>
+      </Container>
     )
   }
 }
