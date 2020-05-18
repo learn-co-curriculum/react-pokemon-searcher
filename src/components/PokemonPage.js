@@ -12,7 +12,7 @@ class PokemonPage extends React.Component {
         <br />
         <PokemonForm />
         <br />
-        <Search onChange={() => console.log('🤔')} />
+        <Search />
         <br />
         <PokemonCollection />
       </Container>
