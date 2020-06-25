@@ -2,6 +2,8 @@
 
 ![Pokemon search screen recording](https://curriculum-content.s3.amazonaws.com/react/pokemon.gif)
 
+(Note: If the gif isn't working, view it directly by navigating [here](https://curriculum-content.s3.amazonaws.com/react/pokemon.gif))
+
 ## React Code Challenge Practice
 
 ## Project Goals
